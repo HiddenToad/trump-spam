@@ -1,5 +1,5 @@
 # trump-spam
-spam trump's new site truthsocial with selenium and geckodriver
+## spam trump's new site truthsocial with selenium and geckodriver
 
 ### calling all trump haters! trump has made a social network (truthsocial.com). in the terms of service, it specifies not to criticize the social network! well, i'm rebelling against that.
 
