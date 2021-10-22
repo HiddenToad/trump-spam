@@ -2,19 +2,22 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import random as rand
+import string
 
+print("configuring selenium and launching geckodriver, please wait a moment...\n")
+alphabet = string.ascii_lowercase
+
+def randstr(a, b):
+    return ''.join(rand.choice(alphabet) for i in range(rand.randint(a, b)))
 
 pref = webdriver.FirefoxOptions()
-alphabet = [char for char in "abcdefghijklmnopqrstuvwxyz"]
-def randstr(a, b):
-    temp = ""
-    for i in range(rand.randint(a,b)):
-        temp += rand.choice(alphabet)
-    return temp
-
 pref.set_preference("browser.link.open_newwindow", 1)
 pref.add_argument('--headless')
+pref.add_argument('--disable-gpu')
+
 driver = webdriver.Firefox(options=pref)
+
+print("done!\nrunning script...\n")
 for i in range(100_000):
     driver.get("http://truthsocial.com")
     first_name = randstr(4,8)
