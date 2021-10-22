@@ -17,7 +17,7 @@ for i in range(100_000):
     driver.get("http://truthsocial.com")
     first_name = randstr(7,15)
     last_name = randstr(7,15)
-    email = (randstr(5,15) + "@" + randstr(2,7) + "." + rand.choice(["com", "net"]))
+    email = (randstr(5,15) + rand.choice(["@gmail.com", "@icloud.com", "@me.com", "@hotmail.com", "@yahoo.com", "@hotmail.net", "@outlook.com"]))
     driver.find_element(By.ID, "first_name").send_keys(first_name)
     driver.find_element(By.ID, "Last_name").send_keys(last_name)
     driver.find_element(By.ID, "email").send_keys(email)
