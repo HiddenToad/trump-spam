@@ -32,3 +32,4 @@ for i in range(100_000):
     driver.find_element(By.CLASS_NAME, "space-y-6").submit()
 
     print(f"falsly registered with name {first_name} {last_name} and email {email}")
+driver.quit()
